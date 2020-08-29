@@ -1113,7 +1113,7 @@ function write_ws_xlml_cell(cell, ref/*:string*/, ws, opts, idx/*:number*/, wb, 
 		case 's': t = 'String'; p = escapexlml(cell.v||""); break;
 	}
 	/* TODO: cell style */
-	var os = get_cell_style(opts.cellXfs, cell, opts);
+	var os = cell.s;
 	attr["ss:StyleID"] = "s" + (21+os);
 	attr["ss:Index"] = addr.c + 1;
 	var _v = (cell.v != null ? p : "");

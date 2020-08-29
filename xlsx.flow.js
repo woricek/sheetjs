@@ -13565,7 +13565,7 @@ function write_ws_xml_cell(cell/*:Cell*/, ref, ws, opts/*::, idx, wb*/)/*:string
 	}
 	var v = writetag('v', escapexml(vv)), o = ({r:ref}/*:any*/);
 	/* TODO: cell style */
-	var os = get_cell_style(opts.cellXfs, cell, opts);
+	var os = cell.s;
 	if(os !== 0) o.s = os;
 	switch(cell.t) {
 		case 'n': break;
@@ -14614,7 +14614,7 @@ function write_ws_bin_cell(ba/*:BufArray*/, cell/*:Cell*/, R/*:number*/, C/*:num
 	}
 	var o/*:any*/ = ({r:R, c:C}/*:any*/);
 	/* TODO: cell style */
-	o.s = get_cell_style(opts.cellXfs, cell, opts);
+	o.s = cell.s;
 	if(cell.l) ws['!links'].push([encode_cell(o), cell.l]);
 	if(cell.c) ws['!comments'].push([encode_cell(o), cell.c]);
 	switch(cell.t) {
@@ -16839,7 +16839,7 @@ function write_ws_xlml_cell(cell, ref/*:string*/, ws, opts, idx/*:number*/, wb, 
 		case 's': t = 'String'; p = escapexlml(cell.v||""); break;
 	}
 	/* TODO: cell style */
-	var os = get_cell_style(opts.cellXfs, cell, opts);
+	var os = cell.s;
 	attr["ss:StyleID"] = "s" + (21+os);
 	attr["ss:Index"] = addr.c + 1;
 	var _v = (cell.v != null ? p : "");

@@ -262,7 +262,7 @@ function write_ws_xml_cell(cell/*:Cell*/, ref, ws, opts/*::, idx, wb*/)/*:string
 	}
 	var v = writetag('v', escapexml(vv)), o = ({r:ref}/*:any*/);
 	/* TODO: cell style */
-	var os = get_cell_style(opts.cellXfs, cell, opts);
+	var os = cell.s;
 	if(os !== 0) o.s = os;
 	switch(cell.t) {
 		case 'n': break;

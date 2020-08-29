@@ -694,7 +694,7 @@ function write_ws_bin_cell(ba/*:BufArray*/, cell/*:Cell*/, R/*:number*/, C/*:num
 	}
 	var o/*:any*/ = ({r:R, c:C}/*:any*/);
 	/* TODO: cell style */
-	o.s = get_cell_style(opts.cellXfs, cell, opts);
+	o.s = cell.s;
 	if(cell.l) ws['!links'].push([encode_cell(o), cell.l]);
 	if(cell.c) ws['!comments'].push([encode_cell(o), cell.c]);
 	switch(cell.t) {
