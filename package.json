@@ -1,7 +1,7 @@
 {
 	"name": "xlsx-basic-styles",
 	"version": "0.16.6",
-	"author": "sheetjs",
+	"author": "woricek",
 	"description": "SheetJS Spreadsheet data parser and writer",
 	"keywords": [
 		"excel",
