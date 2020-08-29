@@ -1,6 +1,6 @@
 {
-  "name": "js-xlsx",
-  "homepage": "https://github.com/SheetJS/js-xlsx",
+  "name": "js-xlsx-basic-styles",
+  "homepage": "https://github.com/woricek/sheetjs",
   "main": "dist/xlsx.full.min.js",
   "ignore": [
     "bin",
