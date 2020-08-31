@@ -1,6 +1,6 @@
 {
 	"name": "@woricek/xlsx-basic-styles",
-	"version": "0.16.6",
+	"version": "0.1.2",
 	"author": "woricek",
 	"description": "SheetJS Spreadsheet data parser and writer",
 	"keywords": [
@@ -55,7 +55,7 @@
 		"type": "git",
 		"url": "git://github.com/woricek/sheetjs.git"
 	},
-	"publishConfig": { "registry": "https://npm.pkg.github.com/" },
+	"publishConfig": { "registry": "https://registry.npmjs.org/" },
 	"scripts": {
 		"pretest": "git submodule init && git submodule update",
 		"test": "make travis",
